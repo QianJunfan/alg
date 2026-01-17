@@ -21,7 +21,7 @@ commit_message="$current_date
 
 $file_list"
 rm -f README
-echo HEAD >>README
+cat HEAD >>README
 python sc.py >>README
 git commit -m "$commit_message"
 current_branch=$(git rev-parse --abbrev-ref HEAD)
